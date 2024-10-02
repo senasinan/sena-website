@@ -1,0 +1,34 @@
+<html>
+<script src="index.js"> </script>
+<h1> Sena </h1>
+<div class="slidecontainer">
+    <input type="range" min="100" max="400" id="myRange">
+</div>
+<img src="https://images.unsplash.com/photo-1719937206498-b31844530a96?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="400" height="400" id="myImage"/>
+<script>  
+document.addEventListener('DOMContentLoaded', (event)=> { 
+    var slider = document.getElementById("myRange")
+var image = document.getElementById("myImage")
+slider.value= y 
+image.width = y 
+slider.oninput = function(){
+    image.width = this.value // this == slider 
+}  
+})
+</script>
+
+<input type="file" id="fileInput">
+<script>
+    const fileInput = document.getElementById("fileInput")
+    const preViewImg = document.getElementById ("myImage")
+    fileInput.addEventListener('change', (event) => {
+const file = event.target.files[0];
+const reader = new FileReader ();
+
+reader.addEventListener('load', (event) => {
+    preViewImg.src = event.target.src;
+} )
+reader.readAsDataURL(file);
+    })
+</script>
+</html>
